@@ -65,11 +65,13 @@ site.get('/link', function(req, res){
     var filename = (path.join(__dirname, 'links/'+linkid+'.txt'));
     fs.readFile(filename, "utf-8", function(err, data) {
         if(err) {
-            console.log(err)
+            console.log(err);
+            res.render('link', { error: "This file doesn't exist!" });
         } else {
             data = JSON.parse(data);
             if(checkDate(data.date,"24")){
                 console.log(data);
+                res.render('link', { data: data } );
             } else {
                 fs.unlink(filename, function(err) {
                     if(err){
@@ -78,10 +80,10 @@ site.get('/link', function(req, res){
                         console.log("Date invalid - file deleted.");
                     }
                 });
+                res.render('link', { error: "The date was invalid, so I deleted the file!" });
             }
         }
     });
-    res.render('link');
 });
 
 /**

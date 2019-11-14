@@ -3,18 +3,18 @@ extends layout/layout.pug
 block content
     div.row
         div.col
-            p
-                | Link check will be done here!
-            ul
-                li
-                    | Get the link from the get
-                li
-                    | Do I have the link?
-                li
-                    | If so, is there a file associated with it?
-                li
-                    | If yes, is the file valid?
-                li
-                    | Show the file contents
-                li
-                    | Handle errors
+            if data
+                p
+                    | Here's the data:
+                ul
+                    li
+                        | Name: #{data.name}
+                    li
+                        | Email: #{data.email}
+                    li
+                        | Date: #{data.date}
+            else
+                p
+                    | Oops! Something went wrong here!
+                p
+                    | #{error}
