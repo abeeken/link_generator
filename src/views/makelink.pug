@@ -1,0 +1,12 @@
+extends layout/layout.pug
+
+block content
+    div.row
+        div.col
+            p
+                | Click on the button to generate a link. You could put some parameters in, I guess?
+            form(action="/addrecord" method="POST")
+                input(type="text" placeholder="name" name="name")
+                input(type="text" placeholder="email" name="email")
+                button(type="submit")
+                    | Submit

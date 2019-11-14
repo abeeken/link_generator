@@ -8,7 +8,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
 var jsFiles = [
-    'src/js/example.js'
+    ''
 ];
 
 gulp.task('clean', function () {
@@ -45,4 +45,4 @@ gulp.task('scripts', function(){
         .pipe(gulp.dest('public/js'))
 });
 
-gulp.task('build', gulp.series('clean', 'sass', 'minicss', 'scripts'), function(){});
+gulp.task('build', gulp.series('clean', 'sass', 'minicss', 'views'), function(){});
