@@ -9,7 +9,7 @@ Use it to make a link. It stores the data for the link, JSON formatted, in a fla
 
 When you access the /link page with a valid linkid (the hashed value) it tries to retrieve the file and then checks the date - if it's expired it deletes it.
 
-You can use this to build some interesting apps with self destructing links.
+You can use this to build some interesting apps with self destructing links. Includes some pug templates to get you started.
 
 Enjoy!
 
