@@ -1,7 +1,19 @@
 # link_generator
-Node.js self destructing link generator
+Node.js self destructing link generator.
 
-## Create Link
+Download, do the "npm install" fandango and run with "node app.js" or "node run dev".
+
+## What's it doing?
+
+Use it to make a link. It stores the data for the link, JSON formatted, in a flat file with a filename made up of the data plus the current datetime, hashed.
+
+When you access the /link page with a valid linkid (the hashed value) it tries to retrieve the file and then checks the date - if it's expired it deletes it.
+
+You can use this to build some interesting apps with self destructing links.
+
+Enjoy!
+
+### Create Link
 
 /makelink
 
@@ -11,7 +23,7 @@ Displays a form which users can enter some information into
 
 Writes a file containing the data in the form, as well as the current datetime. Filename is derived from all data hashed alongside the datetime to ensure randomness.
 
-## Read Link
+### Read Link
 
 /link?linkid=
 
