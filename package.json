@@ -18,7 +18,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.2",
     "moment": "^2.24.0",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "pug": "^2.0.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
