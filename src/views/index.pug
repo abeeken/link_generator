@@ -4,15 +4,12 @@ block content
     div.row
         div.col
             p
-                | A Node.js powered link generator
+                | A Node.js powered self destructing link generator prototype
             p
-                | To Do:
-            ul
-                li
-                    | Check that link is valid
-                li
-                    | If it is, cool
-                li
-                    | If it isn't, kill the link
-                li
-                    | If I can't find it, display an error
+                | Select Make Link above to make a new link
+            p
+                | The link is saved as a flat file with data encoded as JSON
+            p
+                | Access the link at /link?linkid=xyz
+            p
+                | If the link is more than 24 hours old, it will self destruct

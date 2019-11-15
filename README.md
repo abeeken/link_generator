@@ -3,6 +3,8 @@ Node.js self destructing link generator.
 
 Download, do the "npm install" fandango and run with "node app.js" or "node run dev".
 
+Make sure you create a folder in the app root called "links" - the files will be created in here.
+
 ## What's it doing?
 
 Use it to make a link. It stores the data for the link, JSON formatted, in a flat file with a filename made up of the data plus the current datetime, hashed.
